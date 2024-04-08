@@ -32,8 +32,8 @@ body {
     border-radius: 10px;
     text-align: right;
     font-size: 28px;
-    height: 60px;
-    overflow: hidden;
+    height: 100px; /* 高さを100pxに変更 */
+    overflow: auto; /* オーバーフローした場合はスクロールバーを表示 */
 }
 
 #equation {
@@ -84,6 +84,7 @@ body {
 .btn-equal {
     background-color: #2196F3;
     color: #fff;
+    grid-row: span 2;
 }
 
 .btn-equal:hover {
@@ -101,4 +102,82 @@ body {
 
 .btn-zero {
     grid-column: span 2;
+}
+
+/* 一般的な計算機のボタン配置に変更 */
+.buttons {
+    grid-template-areas:
+        "clear clear divide multiply"
+        "seven eight nine subtract"  
+        "four five six add"
+        "one two three equal"
+        "zero zero decimal equal";
+}
+
+.btn-clear {
+    grid-area: clear;
+}
+
+.btn-divide {
+    grid-area: divide;
+}
+
+.btn-multiply {
+    grid-area: multiply;
+}
+
+.btn-subtract {
+    grid-area: subtract;
+}
+
+.btn-add {
+    grid-area: add;
+}
+
+.btn-equal {
+    grid-area: equal;
+}
+
+.btn-decimal {
+    grid-area: decimal;
+}
+
+.btn-zero {
+    grid-area: zero;
+}
+
+.btn-one {
+    grid-area: one;
+}
+
+.btn-two { 
+    grid-area: two;
+}
+
+.btn-three {
+    grid-area: three;
+}
+
+.btn-four {
+    grid-area: four;
+}
+
+.btn-five {
+    grid-area: five;
+}
+
+.btn-six {
+    grid-area: six;
+}
+
+.btn-seven {
+    grid-area: seven;
+}
+
+.btn-eight {
+    grid-area: eight;
+}
+
+.btn-nine {
+    grid-area: nine;  
 }
